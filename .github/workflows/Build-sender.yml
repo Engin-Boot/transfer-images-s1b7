@@ -18,27 +18,25 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.0.2 
-      with:
-          vs-version: 15.0
+    #- name: Add msbuild to PATH
+    #  uses: microsoft/setup-msbuild@v1.0.2 
+     # with:
+      #    vs-version: 15.0
     
-    - name: subscribe1 build
-      run: msbuild scu.vcxproj /p:configuration=debug /p:platform=x64
+    #- name: subscribe1 build
+     # run: msbuild scu.vcxproj /p:configuration=debug /p:platform=x64
  
-  Coverage:
-    
-    runs-on: windows-2019
-    
-    steps:
-  
-    - uses: actions/checkout@v2
-      
+   # - name: msbuild Project build
+    #  run:  msbuild .\SenderTest1\TransferMedicalimages.vcxproj /p:configuration=debug /p:platform=x64
+    - name : check g++
+      run : g++ --version
+    - name : check gcov
+      run : gcov --version
     - name: build senderTestApplication
-      run: g++ SenderTest\ImageListTest.cpp -I mc3inc -L mc3lib -l jansson -l libxml2 -l mc3adll64 -l mc3adll64d -l mc3adv64 -l picxm --coverage -o senderTestApp
+      run: g++ SenderTest1\*.cpp -I mc3inc -L mc3lib -l jansson -l libxml2 -l mc3adll64 -l mc3adll64d -l mc3adv64 -l picxm --coverage -o senderTestApp
     
     - name: move gcno to sender test dir
-      run: move *.gcno SenderTest 
+      run: move *.gcno SenderTest1 
 
     - name: move senderTestApp to mc3lib
       run: move senderTestApp.exe mc3lib
@@ -47,7 +45,17 @@ jobs:
       run: cd mc3lib && ./senderTestApp.exe 
 
     - name: move .gcda files to sender test dir
-      run:  move *.gcda SenderTest
+      run:  move *.gcda SenderTest1
 
     - name: sender coverage report
-      run:  gcov -r SenderTest\*.cpp
+      run:  gcov -r SenderTest1/ImageList.cpp
+    - name: sender coverage report
+      run : gcov -r SenderTest1/ImageListTest.cpp
+    - name: sender coverage report
+      run : gcov -r SenderTest1/ReadMessageFromFile.cpp
+    - name: sender coverage report
+      run : gcov -r SenderTest1/SendImage.cpp
+    - name: sender coverage report
+      run : gcov -r SenderTest1/SenderMainFunctions.cpp
+    - name: sender coverage report
+      run : gcov -r SenderTest1/general_util.cpp
