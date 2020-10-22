@@ -17,7 +17,7 @@ void exitApplicationIfNotNormalCompletion(bool statusBool)
 {
 	if (statusBool) {
 		std::cout << "Something went wrong with library/association." << std::endl;
-		exit(EXIT_FAILURE);
+		//exit(EXIT_FAILURE);
 	}
 }
 
@@ -44,7 +44,7 @@ void abortAndReleaseApplicationOnFailure(char* statusMsg, bool statusBool, int* 
 		printf("%s\n", statusMsg);
 		MC_Abort_Association(associationID);
 		MC_Release_Application(applicationID);
-		exit(EXIT_FAILURE);
+		//exit(EXIT_FAILURE);
 	}
 }
 
