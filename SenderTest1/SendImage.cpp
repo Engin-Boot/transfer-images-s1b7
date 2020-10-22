@@ -3,12 +3,6 @@
 #include "general_util.h"
 
 
-//****************************************************************************************************************************
-void getSOPClassUID(InstanceNode* node);
-void setService(InstanceNode* node);
-void setSOPInstanceUID(InstanceNode* node);
-void sendMessage(int A_associationID, InstanceNode* node);
-//****************************************************************************************************************************
 
 SAMP_BOOLEAN SendImage::send(STORAGE_OPTIONS* A_options, int A_associationID, InstanceNode* A_node)
 {
