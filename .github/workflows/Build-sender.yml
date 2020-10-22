@@ -37,8 +37,8 @@ jobs:
     - name: sender coverage report (ImageList)
       run:  gcov -r SenderTest1/ImageList.cpp
       
-    - name: sender coverage report(ImageListTest)
-      run : gcov -r SenderTest1/ImageListTest.cpp
+    - name: sender coverage report(SenderTest)
+      run : gcov -r SenderTest1/SenderTest.cpp
       
     - name: sender coverage report(ReadMessageFromFile)
       run : gcov -r SenderTest1/ReadMessageFromFile.cpp
