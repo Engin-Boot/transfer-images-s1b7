@@ -53,5 +53,5 @@ jobs:
       run : gcov -r SenderTest1/general_util.cpp
       
     - name: sender coverage report(ReadImage)
-      run : gcov -r SenderTest1/(ReadImage).cpp
+      run : gcov -r SenderTest1/ReadImage.cpp
     
