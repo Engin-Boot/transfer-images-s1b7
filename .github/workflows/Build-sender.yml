@@ -57,3 +57,6 @@ jobs:
     - name: sender coverage report(ReadImage)
       run : gcov -r SenderTest1/ReadImage.cpp
     
+    - name: sender coverage report(writeDiagnosisStatusToFile)
+      run : gcov -r SenderTest1/writeDiagnosisStatusToFile.cpp
+    
