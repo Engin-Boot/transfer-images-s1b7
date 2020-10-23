@@ -5,6 +5,7 @@
 #include "general_util.h"
 #include "SenderMainFunctions.h"
 #include "writeDiagnosisStatusToFile.h"
+
 TEST_CASE("when the character array of -p and port number and its corresponding position and storage option is given then setLocalPortNumber sets"
 "the corresponding port number")
 {
