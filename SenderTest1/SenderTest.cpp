@@ -1,8 +1,8 @@
 #define CATCH_CONFIG_MAIN//  This tells Catch to provide a main() - only do this in one cpp file
 
 #include "catch.hpp"
-#include "../Sender/ImageList.h"
-#include "../Sender/general_util.h"
+#include "ImageList.h"
+#include "general_util.h"
 #include "SenderMainFunctions.h"
 #include "writeDiagnosisStatusToFile.h"
 using namespace std;
