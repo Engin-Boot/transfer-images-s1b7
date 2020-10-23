@@ -18,6 +18,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
+    - name: build Sender(MedicalDevice)
+      run: g++ Sender\*.cpp -I mc3inc -L mc3lib -l jansson -l libxml2 -l mc3adll64 -l mc3adll64d -l mc3adv64 -l picxm -o sender  
 
     - name: build senderTestApplication
       run: g++ SenderTest1\*.cpp -I mc3inc -L mc3lib -l jansson -l libxml2 -l mc3adll64 -l mc3adll64d -l mc3adv64 -l picxm --coverage -o senderTestApp
