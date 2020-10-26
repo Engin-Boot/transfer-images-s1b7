@@ -4,7 +4,6 @@
 #include "ImageList.h"
 #include "general_util.h"
 #include "SenderMainFunctions.h"
-#include "writeDiagnosisStatusToFile.h"
 using namespace std;
 
 
@@ -287,17 +286,4 @@ TEST_CASE("When the Storage options,associationId and instaceList with no succes
 	REQUIRE(sampBool == SAMP_FALSE);
 }
 
-TEST_CASE("when the start and stop image numebr are given then the writeDiagnosisStatusOfImageToFile writes Diagnosis Pending for every image in csv file")
-{
-	WriteDiagnosisStatusOfImageToFile(0, 1);
-	ifstream fin;
-	fin.open("Status.csv", ios::in);
-	string line;
-	string imageName;
-	getline(fin, line);
-	REQUIRE(line == "IMAGE_NAME,DIAGNOSIS_STATUS");
-	fin >> imageName;
-	REQUIRE(imageName == "0.img,PENDING");
 
-
-}
