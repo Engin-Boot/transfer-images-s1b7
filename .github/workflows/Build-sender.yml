@@ -25,17 +25,20 @@ jobs:
       run: g++ SenderTest1\*.cpp -I mc3inc -L mc3lib -l jansson -l libxml2 -l mc3adll64 -l mc3adll64d -l mc3adv64 -l picxm --coverage -o senderTestApp
     
     - name: move gcno to sender test dir
-      run: move *.gcno SenderTest1 
+      run: move *.gcno SenderTest1
 
     - name: move senderTestApp to mc3lib
       run: move senderTestApp.exe mc3lib
     
     - name: cd into mc3lib to run sender
       run: cd mc3lib && ./senderTestApp.exe 
-
+	
     - name: move .gcda files to sender test dir
       run:  move *.gcda SenderTest1
 
+    - name: testing Python Csv File Creation
+      run : .\TestingCsvCreationAndWriting\SubcribeImageNameAndWriteIntoCsv_test.exe
+	
     - name: sender coverage report (ImageList)
       run:  gcov -r SenderTest1/ImageList.cpp
       
