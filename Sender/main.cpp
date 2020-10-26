@@ -1,6 +1,5 @@
 #pragma warning(disable:4996)
 #include "SenderMainFunctions.h"
-#include"writeDiagnosisStatusToFile.h"
 #include <iostream>
 
 //****************************************************************************************************************************
@@ -39,7 +38,6 @@ int main(int argc, char* argv[])
 	addImagesToList(&options, imgList, &instanceList);
 
 	totalImages = imgList->GetNumNodes(instanceList);
-	WriteDiagnosisStatusOfImageToFile(options.StartImage, options.StopImage);
 
 	std::cout << "TotalIMages :" << totalImages << std::endl;
 
