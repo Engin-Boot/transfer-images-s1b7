@@ -28,7 +28,7 @@ jobs:
         run : |
           pyflakes  ./DiagonosisStatus/subscribeDiagonisedImageNameAndUpdateStatus.py 
           pyflakes  ./DiagonosisStatus/PublishDiagonisedImageName.py
-          pyflakes  ./EmailSender/filePolling.py
-          pyflakes  ./EmailSender/Sendmail.py
+          pyflakes  ./EmailSender/mail_credendials.py
+          pyflakes  ./EmailSender/filePollingAndSendMail.py
           pyflakes  ./SendImageNameFromScpToScu/pubishImageName.py
           pyflakes  ./SendImageNameFromScpToScu/SubcribeImageNameAndWriteIntoCsv.py
