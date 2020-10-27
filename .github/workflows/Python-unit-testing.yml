@@ -19,8 +19,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           pip install paho-mqtt
+          pip install --upgrade pyflakes
       - name: Test with pytest
         run: |
           pytest ./DiagnosisStatusUpdateTest/subscribeDiagonisedimageNameAndUpdateStatus_test.py
           pytest ./TestingCsvCreationAndWriting/SubcribeImageNameAndWriteIntoCsv_test.py
+          pyflakes checkPath ./DiagonosisStatus/
      
