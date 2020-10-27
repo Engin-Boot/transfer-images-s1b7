@@ -1,6 +1,4 @@
 import paho.mqtt.client as mqtt
-from tempfile import NamedTemporaryFile
-import shutil
 import csv
 import os
 
