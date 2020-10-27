@@ -34,6 +34,6 @@
 
   - __*Directory : DiagonosisStatus*__
   
-  - *PublishDiagonisedImageName.py* when doctor diagonose specific image, he/she will excute this file and nter the image name to publish in topic *"DiagonosedImageName"*
+  - *PublishDiagonisedImageName.py* when doctor diagonose specific image, he/she will excute this file and enter the image name to publish in topic *"DiagonosedImageName"*
   
   - *subscribeDiagonisedImageNameAndUpdateStatus.py* will subscribe to topic *"DiagonosedImageName"* and change the status of received image name to *Diogonose Completed*
