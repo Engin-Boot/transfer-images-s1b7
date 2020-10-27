@@ -4,7 +4,7 @@ import shutil
 import csv
 
 def OpenAndUpdateCSVFile(DiagnosedImageName):
-    filename =r"D:\transfer-images-s1b7\MC3File\status.csv"
+    filename =r"..\MC3File\status.csv"
     tempfile = NamedTemporaryFile(mode='w', delete=False)
 
     fields = ['IMAGE_NAME','DIAGNOSIS_STATUS']
