@@ -3,7 +3,7 @@ import csv
 import os
 
 def OpenAndUpdateCSVFile(DiagnosedImageName):
-    csvfilename = r"D:\transfer-images-s1b7\MC3File\status.csv"
+    csvfilename = r"..\MC3File\status.csv"
     with open(csvfilename, 'a') as file:
         writer = csv.writer(file)
         if(os.stat(csvfilename).st_size == 0):
