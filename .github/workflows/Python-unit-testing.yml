@@ -24,6 +24,7 @@ jobs:
         run: |
           pytest ./DiagnosisStatusUpdateTest/subscribeDiagonisedimageNameAndUpdateStatus_test.py
           pytest ./TestingCsvCreationAndWriting/SubcribeImageNameAndWriteIntoCsv_test.py
-          pyflakes checkPath ./DiagonosisStatus/PublishDiagonisedImageName.py
-          pyflakes checkPath ./DiagonosisStatus/subscribeDiagonisedImageNameAndUpdateStatus.py
+ 
+      - name: check python files
+        run :  pyflakes  ./DiagonosisStatus/subscribeDiagonisedImageNameAndUpdateStatus.py
      
