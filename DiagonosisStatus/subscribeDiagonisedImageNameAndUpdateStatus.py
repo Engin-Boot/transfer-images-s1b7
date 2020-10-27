@@ -22,7 +22,7 @@ def OpenAndUpdateCSVFile(DiagnosedImageName):
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
-    client.subscribe("ImageName")
+    client.subscribe("DiagonosedImageName")
    
 
 
