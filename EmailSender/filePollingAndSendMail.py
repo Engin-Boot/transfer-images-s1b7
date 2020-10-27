@@ -1,7 +1,7 @@
 import time
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
-import sendmail
+import mail_credentials
 
 if __name__ == "__main__":
     patterns = "*"
@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
 def on_created(event):
     msg = f"{event.src_path} has been Generated.\n Please Have a look!!"  #Body of the mail
-    sendmail.sendMail(msg)
+    mail_credentials.sendMail(msg)
 
 my_event_handler.on_created = on_created
 
