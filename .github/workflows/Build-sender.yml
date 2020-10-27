@@ -42,7 +42,7 @@ jobs:
     - name: testing subscribe Diagonised image Name And Update Status
       run:  .\DiagnosisStatusUpdateTest\subscribeDiagonisedimageNameAndUpdateStatus_test.exe
 
-    - name: sender coverage report (ImageList)
+    - name: sender coverage report 
       run: |
         gcov -r SenderTest1/ImageList.cpp
         gcov -r SenderTest1/SenderTest.cpp
