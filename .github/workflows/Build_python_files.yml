@@ -14,4 +14,4 @@ jobs:
         with:
           python-version: 3.x
           architecture: x64
-      - run: ./DiagonosisStatus/PublishDiagonisedImageName.py
+      - run: python ./DiagonosisStatus/PublishDiagonisedImageName.py
