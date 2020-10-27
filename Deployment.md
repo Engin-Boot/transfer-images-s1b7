@@ -21,9 +21,8 @@
   - *filePollingAndSendMail.py* poll the Receiver Directory continuosly to detect new files that are received and send mail to Radiologist if new images received.
 
   - *mail_credendials.py* has mail sender and Radiologist mail credentials.
-run filepolling.exe in emailsender Directory to send mail to doctor
 
-## Creating CSV file that has image name and status(Diagonise Pending)
+## Creating CSV file that has image name and status(Diagonose Pending)
  
   - __*Directory : SendImageNameFromScpToScu*__
   
@@ -35,6 +34,6 @@ run filepolling.exe in emailsender Directory to send mail to doctor
 
   - __*Directory : DiagonosisStatus*__
   
-  - *PublishDiagonisedImageName.py* when doctor diagonise specific image, he/she will excute this file and nter the image name to publish in topic *"DiagonisedImageName"*
+  - *PublishDiagonisedImageName.py* when doctor diagonose specific image, he/she will excute this file and nter the image name to publish in topic *"DiagonosedImageName"*
   
-  - *subscribeDiagonisedImageNameAndUpdateStatus.py* will subscribe to topic *"DiagonisedImageName"* and change the status of received image name to *Diogonose Completed*
+  - *subscribeDiagonisedImageNameAndUpdateStatus.py* will subscribe to topic *"DiagonosedImageName"* and change the status of received image name to *Diogonose Completed*
