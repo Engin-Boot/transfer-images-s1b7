@@ -38,6 +38,9 @@ jobs:
 
     - name: testing Python Csv File Creation
       run : .\TestingCsvCreationAndWriting\SubcribeImageNameAndWriteIntoCsv_test.exe
+    
+    - name: testing subscribe Diagonised image Name And Update Status
+      run:  .\DiagnosisStatusUpdateTest\subscribeDiagonisedimageNameAndUpdateStatus_test.exe
 
     - name: sender coverage report (ImageList)
       run:  gcov -r SenderTest1/ImageList.cpp
