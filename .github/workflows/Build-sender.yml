@@ -43,26 +43,12 @@ jobs:
       run:  .\DiagnosisStatusUpdateTest\subscribeDiagonisedimageNameAndUpdateStatus_test.exe
 
     - name: sender coverage report (ImageList)
-      run:  gcov -r SenderTest1/ImageList.cpp
-      
-    - name: sender coverage report(SenderTest)
-      run : gcov -r SenderTest1/SenderTest.cpp
-      
-    - name: sender coverage report(ReadMessageFromFile)
-      run : gcov -r SenderTest1/ReadMessageFromFile.cpp
-      
-    - name: sender coverage report(SendImage)
-      run : gcov -r SenderTest1/SendImage.cpp
-      
-    - name: sender coverage report(SenderMainFunctions)
-      run : gcov -r SenderTest1/SenderMainFunctions.cpp
-      
-    - name: sender coverage report(general_util)
-      run : gcov -r SenderTest1/general_util.cpp
-      
-    - name: sender coverage report(ReadImage)
-      run : gcov -r SenderTest1/ReadImage.cpp
-    
-    - name: sender coverage report(writeDiagnosisStatusToFile)
-      run : gcov -r SenderTest1/writeDiagnosisStatusToFile.cpp
-    
+      run: |
+        gcov -r SenderTest1/ImageList.cpp
+        gcov -r SenderTest1/SenderTest.cpp
+        gcov -r SenderTest1/ReadMessageFromFile.cpp
+        gcov -r SenderTest1/SendImage.cpp
+        gcov -r SenderTest1/SenderMainFunctions.cpp
+        gcov -r SenderTest1/general_util.cpp
+        gcov -r SenderTest1/ReadImage.cpp
+        gcov -r SenderTest1/writeDiagnosisStatusToFile.cpp
