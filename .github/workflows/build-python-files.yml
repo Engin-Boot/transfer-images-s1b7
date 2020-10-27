@@ -1,4 +1,4 @@
-name: Python unit testing
+name:check Python files
 
 on:
   push:
