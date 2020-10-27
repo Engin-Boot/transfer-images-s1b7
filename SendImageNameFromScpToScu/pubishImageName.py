@@ -12,7 +12,11 @@ if __name__ == "__main__":
 
 def on_created(event):
     msg = f"{event.src_path[33:]}"  #Body of the mail
-    publish.single("writingImageName", msg, hostname="mqtt.eclipse.org")
+    try:
+        publish.single("writingImageName", msg, hostname="mqtt.eclipse.org")
+    except:
+        print("Failed to Connect and Publish")
+       
 
 my_event_handler.on_created = on_created
 
