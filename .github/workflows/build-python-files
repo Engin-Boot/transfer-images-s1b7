@@ -1,0 +1,34 @@
+name: Python unit testing
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python # Set Python version
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install paho-mqtt
+          pip install --upgrade pyflakes
+
+      - name: check python files
+        run : |
+	  pyflakes  ./DiagonosisStatus/subscribeDiagonisedImageNameAndUpdateStatus.py
+	  pyflakes  ./DiagonosisStatus/PublishDiagonisedImageName.py
+	  pyflakes  ./EmailSender/filepolling.py
+	  pyflakes  ./EmailSender/Sendmail.py
+	  pyflakes  ./SendImageNameFromScpToScu/pubishImageName.py
+	  pyflakes  ./SendImageNameFromScpToScu/SubcribeImageNameAndWriteIntoCsv
