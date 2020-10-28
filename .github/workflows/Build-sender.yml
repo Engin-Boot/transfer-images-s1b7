@@ -36,12 +36,6 @@ jobs:
     - name: move .gcda files to sender test dir
       run:  move *.gcda SenderTest1
 
-    - name: testing Python Csv File Creation
-      run : .\TestingCsvCreationAndWriting\SubcribeImageNameAndWriteIntoCsv_test.exe
-    
-    - name: testing subscribe Diagonised image Name And Update Status
-      run:  .\DiagnosisStatusUpdateTest\subscribeDiagonisedimageNameAndUpdateStatus_test.exe
-
     - name: sender coverage report 
       run: |
         gcov -r SenderTest1/ImageList.cpp
